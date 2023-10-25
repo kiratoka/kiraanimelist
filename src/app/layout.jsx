@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'KiraAnimeList',
-  description: 'Website Anime versi Kira',
+  description: 'Website Anime versi Kiratoka',
 }
 
 export default function RootLayout({ children }) {

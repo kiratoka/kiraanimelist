@@ -13,7 +13,7 @@ const AnimeList = ({ api }) => {
 
                 return (
 
-                    <Link href={`/${anime.mal_id}`} className="cursor-pointer hover:text-cyan-500 transition-all" key={index}>
+                    <Link href={`/anime/${anime.mal_id}`} className="cursor-pointer hover:text-cyan-500 transition-all" key={index}>
                         <div className="">
                             <div className="flex justify-center">
                                 <img className=" imgAnimeList foto w-full max-h-64 cardPicture object-cover hover:opacity-60" src={anime.images.jpg.large_image_url} alt="" />

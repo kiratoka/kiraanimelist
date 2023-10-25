@@ -8,6 +8,8 @@ import Image from 'next/image'
 import AnimeList from "@/components/AnimeList"
 import Link from 'next/link'
 import Header from '@/components/AnimeList/Header'
+import { getAnimeResponse } from './libs/api-libs'
+
 
 // Jika Komponen File bernama Index.js maka tidak perlu tulis nama file komponennya
 
@@ -30,17 +32,19 @@ import Header from '@/components/AnimeList/Header'
 //  Cara Kedua Menggunakan Arrow Function
 
 
+
+
 const Page = async () => {
 
-  const responseAnimeFull = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/anime/{id}`)
 
+  const animePopuler = await getAnimeResponse("top/anime" , "limit=10")
 
   // Lakukan perintah ini jika kamu mau meng Limit data
 
-  const responseAnimePopuler = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?limit=10`)
+  // const responseAnimePopuler = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?limit=10`)
 
-  const daftarAnime = await responseAnimeFull.json()
-  const animePopuler = await responseAnimePopuler.json()
+  
+  // const animePopuler = await responseAnimePopuler.json()
 
 
   return (
