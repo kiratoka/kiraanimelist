@@ -4,6 +4,14 @@ import { useRef, useState } from "react"
 const Pagination = ({ page, lastPage, setPage }) => {
     const searchRef = useRef()
 
+    const scrollTop = () => {
+        scrollTo({
+            behavior: "smooth",
+            top: 0
+        })
+    }
+
+
     const handleSearch = (event) => {
         if (event.key === "Enter") {
             event.preventDefault()
@@ -13,18 +21,13 @@ const Pagination = ({ page, lastPage, setPage }) => {
             }
             else {
                 setPage(keyword)
+                scrollTop()
             }
         }
 
     }
 
 
-    const scrollTop = () => {
-        scrollTo({
-            behavior: "smooth",
-            top: 0
-        })
-    }
 
 
     const handleNextPage = () => {
