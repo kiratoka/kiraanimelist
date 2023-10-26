@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <div>
 
-            <nav class=" bg-gray-800 py-2">
+            <nav class=" bg-gray-800 md:bg-transparent py-2">
                 <div class="flex flex-wrap md:items-center md:justify-between md:flex-row flex-col mx-auto p-4 md:ml-8">
                     <a href="/" class="flex justify-center">
                         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 w-10 md:h-8 md:mr-3" alt="Flowbite Logo" />

@@ -34,7 +34,7 @@ const InputSearchMobile = () => {
                 </div>
                 <input type="text" id="search-navbar" class="block w-full p-2 pl-10 text-sm  border gray-50 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Ini Alat Untuk Mencari" ref={searchRef} onKeyDown={handleSearch} />
             </div>
-            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-gray-800 md:bg-gray-800 border-gray-700">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-gray-800 md:bg-black border-gray-700">
                 <li>
                     <a href="/" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 hover:text-cyan-500" aria-current="page">Home</a>
                 </li>

@@ -11,7 +11,7 @@ function Footer() {
     ];
 
     return (
-        <footer className="bg-gray-900 text-white py-8 px-4">
+        <footer className="bg-black text-white py-8 px-4">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 {/* Bagian kiri footer */}
                 <div className="text-center md:text-left mb-4 md:mb-0">
@@ -43,7 +43,7 @@ function Footer() {
                 </p>
                 {/* Menambahkan kalimat disclaimer hak cipta */}
                 <p>
-                    Website ini mengandung konten yang mungkin tidak dimiliki oleh Kiratoka. Kiratoka tidak bertanggung jawab atas pelanggaran hak cipta yang terjadi akibat penggunaan konten tersebut. Kiratoka menghormati hak cipta pemilik asli dan berusaha untuk tidak melanggar hak cipta mereka.
+                    Website ini mengandung konten yang mungkin tidak dimiliki oleh Kiratoka. Kiratoka tidak bertanggung jawab atas pelanggaran hak cipta yang terjadi akibat penggunaan konten tersebut. Kiratoka menghormati hak cipta pemilik asli dan berusaha untuk tidak melanggar hak cipta mereka. Penafian Hak Cipta Berdasarkan Bagian 107 dari Undang-Undang Hak Cipta 1976, penggunaan yang adil diperbolehkan untuk tujuan seperti kritik, komentar, pelaporan berita, pengajaran, beasiswa, dan penelitian. Penggunaan yang adil adalah penggunaan yang diizinkan oleh undang-undang hak cipta yang mungkin melanggar. Penggunaan non-profit, pendidikan, atau pribadi memberikan keseimbangan yang mendukung penggunaan yang adil.
                 </p>
             </div>
         </footer>
