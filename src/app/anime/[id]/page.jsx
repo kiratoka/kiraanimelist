@@ -40,16 +40,29 @@ const Page = async ({ params }) => {
     const status = animeFull.data.status
 
     const api = await responseDataChara.json()
-    
+
 
     const genreNames = genre.map((genre) => genre.name);
     const namaGenre = genreNames.join(" , ");
+    const test = api.data.role
 
-
-
+    // api.data.map((item) => {
+    //     // item adalah objek yang ada di dalam array data
+    //     console.log(item.character.name); // menampilkan nama karakter
+    //     console.log(item.character.images.jpg.image_url); // menampilkan gambar jpg karakter
+    //     item.voice_actors.map((actor) => {
+    //         // actor adalah objek yang ada di dalam array voice_actors
+    //         if (actor.language === "Japanese") {
+    //             // jika bahasa adalah Jepang
+    //             console.log(actor.person.name); // menampilkan nama pengisi suara
+    //             console.log(actor.person.images.jpg.image_url); // menampilkan gambar jpg pengisi suara
+    //         }
+    //     });
+    // });
     return (
 
         <div>
+            {test}
             <DescTrailer
                 foto={foto}
                 trailer={trailer}
@@ -69,7 +82,8 @@ const Page = async ({ params }) => {
             </div>
 
             <div>
-                <CharaAnime animeId={animeId} api={api} />
+                
+                <CharaAnime api={api} />
             </div>
 
         </div>

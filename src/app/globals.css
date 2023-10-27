@@ -123,3 +123,14 @@
       height: 100%;
     }
 }
+
+@media (max-width: 768px) {
+  /* Mengubah lebar kotak menjadi setengah layar */
+  .half-width, .sixth-width {
+    width: 50%;
+  }
+  /* Menampilkan dua item di setiap slide */
+  .carousel .slider-wrapper {
+    --items-to-show: 3;
+  }
+}
