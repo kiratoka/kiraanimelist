@@ -53,27 +53,27 @@ const CharaAnime = ({ api }) => {
 
 
 
-        <div className="bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className=" bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
 
 
             {/* Melakukan iterasi pada array data dan menampilkan elemen JSX untuk setiap objek */}
             {api.data.slice(0,).map((item) => (
 
-                <div key={item.character.mal_id} className="flex py-2 px-6 justify-center ">
+                <div key={item.character.mal_id} className="flex py-2 px-6 justify-center">
                     {/* Kotak pertama berisi foto dan nama karakter anime */}
                     <div className="flex">
-                        <div className="bg-gray-800 py-2">
+                        <div className="bg-gray-800 p-4">
                             <img
                                 src={item.character.images.jpg.image_url}
                                 alt={item.character.name}
-                                className="w-64 h-96"
+                                className="w-64 h-72 max-md:h-52 scaleComponent"
                             /> {/* Menampilkan gambar jpg karakter */}
                             <h3 className="text-white text-xl font-bold mt-5 text-center flex justify-center items-center">
                                 {item.character.name}
                             </h3> {/* Menampilkan nama karakter */}
                         </div>
                         {/* Kotak kedua berisi foto dan nama pengisi suara Jepang */}
-                        <div className="bg-gray-900 p-2 w-64 h-100">
+                        <div className="bg-gray-900 p-4 w-64">
                             {/* Melakukan iterasi pada array voice_actors dan menampilkan elemen JSX untuk setiap objek yang bahasa Jepang */}
                             {item.voice_actors
                                 .filter((actor) => actor.language === "Japanese")
@@ -82,7 +82,7 @@ const CharaAnime = ({ api }) => {
                                     <div key={actor.person.mal_id} className=" mb-4">
                                         <img
                                             src={actor.person.images.jpg.image_url}
-                                            className="w-64 h-96"
+                                            className="w-64 h-72 max-md:h-52 scaleComponent"
 
                                         /> {/* Menampilkan gambar jpg pengisi suara */}
                                         <p className="text-white text-xl font-bold mt-5 text-center items-center flex justify-center">

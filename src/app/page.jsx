@@ -9,6 +9,7 @@ import AnimeList from "@/components/AnimeList"
 import Link from 'next/link'
 import Header from '@/components/AnimeList/Header'
 import { getAnimeResponse } from './libs/api-libs'
+import HeaderHome from '@/components/Home/HeaderHome'
 
 
 // Jika Komponen File bernama Index.js maka tidak perlu tulis nama file komponennya
@@ -37,23 +38,25 @@ import { getAnimeResponse } from './libs/api-libs'
 const Page = async () => {
 
 
-  const animePopuler = await getAnimeResponse("top/anime" , "limit=10")
+  const animePopuler = await getAnimeResponse("top/anime", "limit=10")
 
   // Lakukan perintah ini jika kamu mau meng Limit data
 
   // const responseAnimePopuler = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?limit=10`)
 
-  
+
   // const animePopuler = await responseAnimePopuler.json()
 
 
   return (
     <>
-    <section>
 
-     <Header title="Paling Populer" linkHref="/populer" linkTitle="Lihat semua"  />
-      <AnimeList api={animePopuler} />
-    </section>
+      <HeaderHome />
+      <section>
+
+        <Header title="Paling Populer" linkHref="/populer" linkTitle="Lihat semua" />
+        <AnimeList api={animePopuler} />
+      </section>
 
     </>
 

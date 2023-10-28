@@ -44,7 +44,6 @@ const Page = async ({ params }) => {
 
     const genreNames = genre.map((genre) => genre.name);
     const namaGenre = genreNames.join(" , ");
-    const test = api.data.role
 
     // api.data.map((item) => {
     //     // item adalah objek yang ada di dalam array data
@@ -62,7 +61,6 @@ const Page = async ({ params }) => {
     return (
 
         <div>
-            {test}
             <DescTrailer
                 foto={foto}
                 trailer={trailer}
