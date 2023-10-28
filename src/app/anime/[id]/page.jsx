@@ -79,7 +79,7 @@ const Page = async ({ params }) => {
                 />
             </div>
 
-            <div>
+            <div >
                 
                 <CharaAnime api={api} />
             </div>
