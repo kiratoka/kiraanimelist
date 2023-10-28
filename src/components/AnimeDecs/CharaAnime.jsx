@@ -53,10 +53,10 @@ const CharaAnime = ({ api }) => {
 
 
 
-        <div class="bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6">
+        <div class="bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 gap-3">
             {/* <!-- Melakukan iterasi pada array data dan menampilkan elemen JSX untuk setiap objek --> */}
             {api.data.slice(0,).map((item) => (
-                <div key={item.character.mal_id} class="flex flex-row md:flex-row py-2 px-6 justify-center">
+                <div key={item.character.mal_id} class="flex flex-row md:flex-row py-2 justify-center">
                     {/* <!-- Kotak pertama berisi foto dan nama karakter anime --> */}
                     <div class="bg-gray-800 p-4 w-full md:w-1/2">
                         <img
