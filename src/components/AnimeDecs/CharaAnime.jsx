@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 
 
 const CharaAnime = ({ api }) => {
@@ -45,17 +46,18 @@ const CharaAnime = ({ api }) => {
     // });
 
 
-
-
+    const [limit, setLimit] = useState(6);
+    const [showAll, setShowAll] = useState(false);
+    const handleShowAll = () => { setLimit(showAll ? 6 : api.data.length); setShowAll(!showAll); };
 
     // Mengembalikan JSX
     return (
 
 
 
-        <div class="bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 gap-3">
+        <div class="bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 gap-4">
             {/* <!-- Melakukan iterasi pada array data dan menampilkan elemen JSX untuk setiap objek --> */}
-            {api.data.slice(0,).map((item) => (
+            {api.data.slice(0, limit).map((item) => (
                 <div key={item.character.mal_id} class="flex flex-row md:flex-row py-2 justify-center">
                     {/* <!-- Kotak pertama berisi foto dan nama karakter anime --> */}
                     <div class="bg-gray-800 p-4 w-full md:w-1/2">
@@ -63,10 +65,12 @@ const CharaAnime = ({ api }) => {
                             src={item.character.images.jpg.image_url}
                             alt={item.character.name}
                             class="w-full h-auto max-md:h-52 scaleComponent"
-                        /> {/* Menampilkan gambar jpg karakter */}
+                        />{" "}
+                        {/* Menampilkan gambar jpg karakter */}
                         <h3 class="text-white text-xl font-bold mt-5 text-center flex justify-center items-center">
                             {item.character.name}
-                        </h3> {/* Menampilkan nama karakter */}
+                        </h3>{" "}
+                        {/* Menampilkan nama karakter */}
                     </div>
                     {/* <!-- Kotak kedua berisi foto dan nama pengisi suara Jepang --> */}
                     <div class="bg-gray-900 p-4 w-full md:w-1/2">
@@ -79,18 +83,27 @@ const CharaAnime = ({ api }) => {
                                     <img
                                         src={actor.person.images.jpg.image_url}
                                         class="w-full h-auto max-md:h-52 scaleComponent"
-                                    /> {/* Menampilkan gambar jpg pengisi suara */}
+                                    />{" "}
+                                    {/* Menampilkan gambar jpg pengisi suara */}
                                     <p class="text-white text-xl font-bold mt-5 text-center items-center flex justify-center">
                                         {actor.person.name}
-                                    </p> {/* Menampilkan nama pengisi suara */}
+                                    </p>{" "}
+                                    {/* Menampilkan nama pengisi suara */}
                                 </div>
                             ))}
                     </div>
                 </div>
             ))}
+            {/* <!-- Tombol untuk menampilkan atau menyembunyikan semua data --> */}
+            <div class="flex p-2"> {/* Menambahkan kelas flex, justify-end, dan items-start */}
+                <button
+                    class="bg-blue-500 text-white p-2"
+                    onClick={handleShowAll}
+                >
+                    {showAll ? "Sembunyikan" : "Tampilkan semua"}
+                </button>
+            </div>
         </div>
-
-
     );
 };
 

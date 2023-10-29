@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 // Ini adalah cara pertama untuk memanggil suatu komponen
 // import AnimeList from './components/AnimeList'
 
@@ -8,8 +6,9 @@ import Image from 'next/image'
 import AnimeList from "@/components/AnimeList"
 import Link from 'next/link'
 import Header from '@/components/AnimeList/Header'
-import { getAnimeResponse } from './libs/api-libs'
+import { getAnimeResponse, getNestedAnimeResponse } from '../libs/api-libs'
 import HeaderHome from '@/components/Home/HeaderHome'
+import Header2 from "@/components/AnimeList/Header2"
 
 
 // Jika Komponen File bernama Index.js maka tidak perlu tulis nama file komponennya
@@ -39,6 +38,11 @@ const Page = async () => {
 
 
   const animePopuler = await getAnimeResponse("top/anime", "limit=10")
+  let recommendAnime = await getNestedAnimeResponse("recommendations/anime", "entry")
+  recommendAnime = {
+    data: recommendAnime.sort(() => Math.random() - 0.5).slice(0, 10)
+  }
+
 
   // Lakukan perintah ini jika kamu mau meng Limit data
 
@@ -56,6 +60,11 @@ const Page = async () => {
 
         <Header title="Paling Populer" linkHref="/populer" linkTitle="Lihat semua" />
         <AnimeList api={animePopuler} />
+      </section>
+      <section>
+
+        <Header2 title="Rekomendasi Anime" />
+        <AnimeList api={recommendAnime} />
       </section>
 
     </>
