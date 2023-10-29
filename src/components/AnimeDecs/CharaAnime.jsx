@@ -53,7 +53,7 @@ const CharaAnime = ({ api }) => {
     // Mengembalikan JSX
     return (
 
-
+        
 
         <div class="bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 gap-4">
             {/* <!-- Melakukan iterasi pada array data dan menampilkan elemen JSX untuk setiap objek --> */}
