@@ -9,6 +9,7 @@ import Header from '@/components/AnimeList/Header'
 import { getAnimeResponse, getNestedAnimeResponse } from '../libs/api-libs'
 import HeaderHome from '@/components/Home/HeaderHome'
 import Header2 from "@/components/AnimeList/Header2"
+import Footer from "@/components/Footer/Footer"
 
 
 // Jika Komponen File bernama Index.js maka tidak perlu tulis nama file komponennya
@@ -64,11 +65,11 @@ const Page = async () => {
         <AnimeList api={animePopuler} />
       </section>
       <section>
-        
+
         <Header2 title="Rekomendasi Anime" />
         <AnimeList api={recommendAnime} />
       </section>
-
+      <Footer />
     </>
 
 

@@ -39,7 +39,7 @@ const InputSearch = () => {
         if (event.key === "Enter" || event.type === "click") {
             event.preventDefault()
             const keyword = searchRef.current.value
-            if (keyword == "") {
+            if (keyword.trim() == "") {
                 null
             } 
             else {
@@ -69,7 +69,7 @@ const InputSearch = () => {
 
             {/* BUTTON SEARCH END\ */}
 
-            <input type="text" id="search-navbar" class="block w-full p-2 pl-11 text-sm  border  rounded-xl  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 " placeholder="Ini Alat Untuk Mencari" ref={searchRef}
+            <input type="text" id="search-navbar" class="block w-full p-2 pl-11 text-sm  border  rounded-xl  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 " placeholder="Cari Anime" ref={searchRef}
                 onKeyDown={handleSearch}
             />
 
