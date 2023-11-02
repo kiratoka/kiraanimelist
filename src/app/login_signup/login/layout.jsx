@@ -16,9 +16,6 @@ export default function LoginLayout({ children }) {
       <body className={inter.className}>
         <Navbar/>
         {children}
-      <footer>
-        <Footer />
-      </footer>
       </body>
     </html>
   )
