@@ -235,3 +235,9 @@
 .widthCustom {
   width: 500px;
 }
+
+.gradientWarna {
+  background-color: #36096dd0;
+background-image: linear-gradient(315deg, #36096dcc 0%, #37d6d6b0 74%);
+
+}

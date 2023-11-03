@@ -69,6 +69,7 @@ const Page = async () => {
         <Header2 title="Rekomendasi Anime" />
         <AnimeList api={recommendAnime} />
       </section>
+      <Footer />
     </>
 
 

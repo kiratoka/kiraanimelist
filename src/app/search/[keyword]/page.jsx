@@ -2,6 +2,7 @@
 import AnimeList from "@/components/AnimeList"
 import { getAnimeResponse } from "@/libs/api-libs"
 import HeaderKeyword from "@/components/AnimeList/HeaderKeyword"
+import Footer from "@/components/Footer/Footer"
 
 const Page = async ({ params }) => {
     // Dibawah ini sama artinya dengan const keyword = params.keyword
@@ -22,7 +23,7 @@ const Page = async ({ params }) => {
                 <HeaderKeyword title={`Hasil pencarian untuk ${decodedKeyword}`} />
                 <AnimeList api={searchAnime} />
             </section>
-
+            <Footer />
         </>
 
     )

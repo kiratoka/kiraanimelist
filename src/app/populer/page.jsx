@@ -5,6 +5,7 @@ import HeaderMenu from "@/components/Utilities/HeaderMenu";
 import Pagination from "@/components/Utilities/Pagination";
 import { getAnimeResponse } from "../../libs/api-libs";
 import { useEffect, useState } from "react";
+import Footer from "@/components/Footer/Footer";
 
 const Page = () => {
 
@@ -36,6 +37,7 @@ const Page = () => {
                 lastPage={animePopuler.pagination?.last_visible_page}
                 setPage={setPage}
             />
+            <Footer />
         </>
     );
 }

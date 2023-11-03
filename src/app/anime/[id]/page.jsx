@@ -4,6 +4,7 @@
 import CharaAnime from "@/components/AnimeDecs/CharaAnime"
 import DescTrailer from "@/components/AnimeDecs/DescTrailer"
 import Episode from "@/components/AnimeDecs/Episode"
+import Footer from "@/components/Footer/Footer"
 import { useState } from "react"
 import { useEffect } from "react"
 
@@ -80,10 +81,10 @@ const Page = async ({ params }) => {
             </div>
 
             <div >
-                
+
                 <CharaAnime api={api} />
             </div>
-
+            <Footer />
         </div>
 
     );
