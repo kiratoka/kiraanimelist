@@ -237,7 +237,14 @@
 }
 
 .gradientWarna {
-  background-color: #36096dd0;
-background-image: linear-gradient(315deg, #36096dcc 0%, #37d6d6b0 74%);
+  background-color: #0d0a0b;
+  background-image: linear-gradient(147deg, #0d0a0b 0%, #124253 74%);
 
+  
+  
+}
+
+.gradientWarna2{
+background-color: #0d0a0b;
+background-image: linear-gradient(147deg, #0d0a0b 0%, #122432 74%);
 }
