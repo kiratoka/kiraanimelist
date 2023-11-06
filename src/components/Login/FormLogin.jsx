@@ -5,7 +5,7 @@ import LoginAuth from "./LoginAuth";
 const FormLogin = () => {
     return (
         <div className="mx-auto max-w-screen-xl px-4 py-20 sm:px-6 lg:px-8 flex justify-center items-center">
-            <div className="mx-auto widthCustom bgHitamTransparan shadow-2xl shadow-black mt-4" >
+            <div className="mx-auto widthCustom bgHitamTransparan shadow-2xl shadow-black mt-12 md:mt-16 lg:mt-6" >
                 <h1 className="text-center text-2xl font-bold text-cyan-400 sm:text-3xl mt-7 pt-4">
                     Ayo mulai
                 </h1>
