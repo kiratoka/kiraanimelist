@@ -4,6 +4,16 @@ const nextConfig = {
         remotePatterns : [
             {
                 hostname : "www.crunchyroll.com"
+            },
+            {
+                hostname : "cdn.myanimelist.net"
+
+            },
+            {
+                hostname : "avatars.githubusercontent.com"
+            },
+            {
+                hostname : "lh3.googleusercontent.com"
             }
         ]
     }

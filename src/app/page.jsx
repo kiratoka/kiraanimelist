@@ -44,7 +44,7 @@ const Page = async () => {
 
     data: recommendAnime.sort(() => Math.random() - 0.5).slice(0, 10)
   }
-  console.log(recommendAnime)
+  // console.log(recommendAnime)
 
 
   // Lakukan perintah ini jika kamu mau meng Limit data

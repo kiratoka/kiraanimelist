@@ -1,5 +1,6 @@
+import Image from "next/image"
 import InputSearch from "./InputSearch"
-import InputSearchMobile from "./InputSearchMobile"
+import InputSearchLanjutan from "./InputSearchLanjutan"
 
 
 
@@ -12,7 +13,7 @@ const Navbar = () => {
             <nav class=" bg-gray-800 md:bg-transparent py-2">
                 <div class="flex flex-wrap md:items-center md:justify-between md:flex-row flex-col mx-auto p-4 md:ml-8">
                     <a href="/" class="flex justify-center">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 w-10 md:h-8 md:mr-3" alt="Flowbite Logo" />
+                        <Image src="/LogoKiraAnimeList.png" width={160} height={160} class="h-14 w-14 md:h-16 md:w-16 md:mr-3" alt="" />
                         <span class="self-center text-2xl font-semibold whitespace-nowrap text-white hover:hover:text-cyan-500">KiraAnimeList</span>
                     </a>
                     <div className="flex flex-wrap">
@@ -31,7 +32,7 @@ const Navbar = () => {
                                 </svg>
                             </button>
                         </div>
-                        <InputSearchMobile />
+                        <InputSearchLanjutan />
                     </div>
 
 
