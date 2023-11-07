@@ -18,7 +18,7 @@ const DescTrailer = ({ judul, sinopsis, foto, trailer }) => {
     return (
         <section class="
         text-white bg-black/75 sm:bg-transparent sm:from-black/100 sm:via-black/100 sm:to-black/40  sm:bg-gradient-to-r md:grid grid-cols-2">
-            <img className="gambarLatar" src={foto} alt="" />
+            <img className="gambarLatar lg:h-full md:h-4/6" src={foto} alt="" />
             <div
                 class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
             >
