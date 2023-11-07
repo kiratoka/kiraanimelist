@@ -5,8 +5,12 @@ import { useEffect } from "react"
 
 const DescTrailer = ({ judul, sinopsis, foto, trailer }) => {
 
+    const [isOpen, setIsOpen] = useState(
+        localStorage.getItem("isOpen") === "true" ? false : true
+      );
+
+    // const [isOpen, setIsOpen] = useState(true)
     
-    const [isOpen, setIsOpen] = useState(true)
     const handleVideoPlayer = () => {
         setIsOpen((prevState) => !prevState)
     }
