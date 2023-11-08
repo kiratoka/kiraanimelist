@@ -53,39 +53,39 @@ const CharaAnime = ({ api }) => {
     // Mengembalikan JSX
     return (
 
-        
 
-        <div class="bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 gap-4">
+
+        <div className="bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 gap-4">
             {/* <!-- Melakukan iterasi pada array data dan menampilkan elemen JSX untuk setiap objek --> */}
             {api.data.slice(0, limit).map((item) => (
-                <div key={item.character.mal_id} class="flex flex-row md:flex-row py-2 justify-center rounded-lg">
+                <div key={item.character.mal_id} className="flex flex-row md:flex-row py-2 justify-center rounded-lg">
                     {/* <!-- Kotak pertama berisi foto dan nama karakter anime --> */}
-                    <div class="gradientWarna p-4 w-full md:w-1/2 rounded-lg">
+                    <div className="gradientWarna p-4 w-full md:w-1/2 rounded-lg">
                         <img
                             src={item.character.images.jpg.image_url}
                             alt={item.character.name}
-                            class="w-full h-auto max-md:h-52 scaleComponent rounded-lg"
+                            className="w-full h-auto max-md:h-52 scaleComponent rounded-lg"
                         />{" "}
                         {/* Menampilkan gambar jpg karakter */}
-                        <h3 class="text-white text-xl font-bold mt-5 text-center flex justify-center items-center">
+                        <h3 className="text-white text-xl font-bold mt-5 text-center flex justify-center items-center">
                             {item.character.name}
                         </h3>{" "}
                         {/* Menampilkan nama karakter */}
                     </div>
                     {/* <!-- Kotak kedua berisi foto dan nama pengisi suara Jepang --> */}
-                    <div class="gradientWarna2 p-4 w-full md:w-1/2 rounded-lg">
+                    <div className="gradientWarna2 p-4 w-full md:w-1/2 rounded-lg">
                         {/* Melakukan iterasi pada array voice_actors dan menampilkan elemen JSX untuk setiap objek yang bahasa Jepang */}
                         {item.voice_actors
                             .filter((actor) => actor.language === "Japanese")
                             .slice(0, 1)
                             .map((actor) => (
-                                <div key={actor.person.mal_id} class="mb-4">
+                                <div key={actor.person.mal_id} className="mb-4">
                                     <img
                                         src={actor.person.images.jpg.image_url}
-                                        class="w-full h-auto max-md:h-52 scaleComponent rounded-lg"
+                                        className="w-full h-auto max-md:h-52 scaleComponent rounded-lg"
                                     />{" "}
                                     {/* Menampilkan gambar jpg pengisi suara */}
-                                    <p class="text-white text-xl font-bold mt-5 text-center items-center flex justify-center">
+                                    <p className="text-white text-xl font-bold mt-5 text-center items-center flex justify-center">
                                         {actor.person.name}
                                     </p>{" "}
                                     {/* Menampilkan nama pengisi suara */}
@@ -95,9 +95,9 @@ const CharaAnime = ({ api }) => {
                 </div>
             ))}
             {/* <!-- Tombol untuk menampilkan atau menyembunyikan semua data --> */}
-            <div class="flex p-2"> {/* Menambahkan kelas flex, justify-end, dan items-start */}
+            <div className="flex p-2"> {/* Menambahkan kelas flex, justify-end, dan items-start */}
                 <button
-                    class="bg-blue-500 text-white p-2"
+                    className="bg-blue-500 text-white p-2"
                     onClick={handleShowAll}
                 >
                     {showAll ? "Sembunyikan" : "Tampilkan semua"}

@@ -46,11 +46,11 @@ const Pagination = ({ page, lastPage, setPage }) => {
 
 
         <div className="flex justify-center items-center py-6">
-            <div class="flex flex-col gap-3 py-10">
+            <div className="flex flex-col gap-3 py-10">
                 {/* <!-- Previous Button --> */}
                 <div className="flex">
                     {page > 1 && (
-                        <button onClick={handlePrevPage} href="#" class="flex items-center justify-center px-3 h-11 text-base font-medium border  rounded-lg   bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white">
+                        <button onClick={handlePrevPage} href="#" className="flex items-center justify-center px-3 h-11 text-base font-medium border  rounded-lg   bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white">
                             Sebelumnya
                         </button>
                     )}
@@ -60,7 +60,7 @@ const Pagination = ({ page, lastPage, setPage }) => {
                     </div>
                     {page < lastPage && (
                         // {/* <!-- Next Button --> */}
-                        <button onClick={handleNextPage} href="#" class="flex items-center justify-center px-3 h-11 text-base font-medium   border  rounded-lg   bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white">
+                        <button onClick={handleNextPage} href="#" className="flex items-center justify-center px-3 h-11 text-base font-medium   border  rounded-lg   bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white">
                             Selanjutnya
                         </button>
                     )

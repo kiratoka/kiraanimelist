@@ -10,13 +10,13 @@ const LoginAuthNavbar = async () => {
             {
                 user ?
                     <li>
-                        <Link href={actionURL} class="block py-2 pl-3 pr-4  rounded    md:p-0 text-white md:hover:text-red-500 hover:text-white md:hover:bg-transparent border-gray-700">
+                        <Link href={actionURL} className="block py-2 pl-3 pr-4  rounded    md:p-0 text-white md:hover:text-red-500 hover:text-white md:hover:bg-transparent border-gray-700">
                             {actionLabel}
                         </Link>
                     </li >
                     :
                     <li>
-                        <Link href={actionURL} class="block py-2 pl-3 pr-4  rounded    md:p-0 text-white md:hover:text-cyan-500 hover:text-white md:hover:bg-transparent border-gray-700">
+                        <Link href={actionURL} className="block py-2 pl-3 pr-4  rounded    md:p-0 text-white md:hover:text-cyan-500 hover:text-white md:hover:bg-transparent border-gray-700">
                             {actionLabel}
                         </Link>
                     </li >
