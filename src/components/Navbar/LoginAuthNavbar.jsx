@@ -1,5 +1,7 @@
 import { authUserSession } from "@/libs/authlibs";
+import Image from "next/image";
 import Link from "next/link";
+import { FaUserCircle } from "react-icons/fa"
 
 const LoginAuthNavbar = async () => {
     const user = await authUserSession()
@@ -11,12 +13,14 @@ const LoginAuthNavbar = async () => {
                 user ?
                     <li>
                         <Link href={actionURL} className="block py-2 pl-3 pr-4  rounded    md:p-0 text-white md:hover:text-red-500 hover:text-white md:hover:bg-transparent border-gray-700">
+                            
                             {actionLabel}
                         </Link>
                     </li >
                     :
                     <li>
-                        <Link href={actionURL} className="block py-2 pl-3 pr-4  rounded    md:p-0 text-white md:hover:text-cyan-500 hover:text-white md:hover:bg-transparent border-gray-700">
+                        <Link href={actionURL} className="py-2 pl-3 pr-4  rounded    md:p-0 text-white md:hover:text-cyan-500 hover:text-white md:hover:bg-transparent border-gray-700  inline-flex">
+                            <FaUserCircle className="text-2xl mr-2" />
                             {actionLabel}
                         </Link>
                     </li >

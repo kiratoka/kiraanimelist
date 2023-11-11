@@ -2,6 +2,8 @@ import Footer from "@/components/Footer/Footer";
 import { authUserSession } from "@/libs/authlibs";
 import Image from "next/image";
 import Link from "next/link";
+
+
 const Page = async () => {
     const user = await authUserSession()
     const namaUser = user?.name
@@ -13,9 +15,31 @@ const Page = async () => {
             {
                 user ?
                     <div>
-                        <h1>Selamat datang di dashboard {namaUser}</h1>
-                        <Image src={fotoUser} alt="..." width={400} height={400} />
+                        <div className="bg-primary min-h-screen flex flex-col items-center justify-center">
+                            <div className="max-w-md w-full p-4 shadow-lg rounded-lg bg-primary-dark">
+                                <div className="flex items-center space-x-4">
+                                    <div className="flex-shrink-0">
+                                        <Image
+                                            src={fotoUser}
+                                            alt={namaUser}
+                                            width={80}
+                                            height={80}
+                                            className="rounded-full"
+                                        />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h1 className="text-2xl font-bold text-label-dark">
+                                            {user.name}
+                                        </h1>
+                                        <p className="text-sm  text-gray-400">
+                                            {user.email}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
 
                     :
                     <div>

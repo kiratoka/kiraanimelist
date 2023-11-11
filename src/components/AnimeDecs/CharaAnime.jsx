@@ -3,13 +3,13 @@ import React, { useState } from "react";
 
 
 const CharaAnime = ({ api }) => {
-    var japanese_voice_actors = api.data.filter((item) => {
-        // item adalah objek yang ada di dalam array data
-        return item.voice_actors.filter((actor) => {
-            // actor adalah objek yang ada di dalam array voice_actors
-            return actor.language === "Japanese"; // mengembalikan data pengisi suara yang bahasa Jepang
-        });
-    });
+    // var japanese_voice_actors = api.data.filter((item) => {
+    //     // item adalah objek yang ada di dalam array data
+    //     return item.voice_actors.filter((actor) => {
+    //         // actor adalah objek yang ada di dalam array voice_actors
+    //         return actor.language === "Japanese"; // mengembalikan data pengisi suara yang bahasa Jepang
+    //     });
+    // });
     // const namaPengisiSuara = [];
     // const fotoPengisiSuara = [];
     // const namaKarakterAnime = [];
@@ -55,7 +55,7 @@ const CharaAnime = ({ api }) => {
 
 
 
-        <div className="bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 gap-4">
+        <div className="bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 gap-4 gridAnimasi">
             {/* <!-- Melakukan iterasi pada array data dan menampilkan elemen JSX untuk setiap objek --> */}
             {api.data.slice(0, limit).map((item) => (
                 <div key={item.character.mal_id} className="flex flex-row md:flex-row py-2 justify-center rounded-lg">

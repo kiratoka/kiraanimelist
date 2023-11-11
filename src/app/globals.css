@@ -10,14 +10,21 @@
     box-sizing: border-box;
 }
 
+.transisi {
+  transition: .5s ease all;
+  -webkit-transition: .5s ease all;
+  -moz-transition: .5s ease all;
+  -ms-transition: .5s ease all;
+  -o-transition: .5s ease all;
+}
 .imgAnimeList {
     width: 100%;
     height: auto;
-    transition: .3s ease all;
-    -webkit-transition: .3s ease all;
-    -moz-transition: .3s ease all;
-    -ms-transition: .3s ease all;
-    -o-transition: .3s ease all;
+    transition: .5s ease all;
+    -webkit-transition: .5s ease all;
+    -moz-transition: .5s ease all;
+    -ms-transition: .5s ease all;
+    -o-transition: .5s ease all;
 }
 .scaleComponent {
   transition: .3s ease all;
@@ -269,4 +276,40 @@ background-image: linear-gradient(147deg, #0d0a0b 0%, #122432 74%);
 
   }
 
+  .bg-primary {
+    background-color: #1a202c;
+  }
+  
+  .bg-primary-dark {
+    background-color: #171923;
+  }
+  
+  .text-label {
+    color: #ffffff;
+  }
+  
+  .text-label-dark {
+    color: #f7fafc;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  /* Gaya untuk grid */
+  .gridAnimasi {
+    animation: fadeInUp 1s ease-out;
+    -webkit-animation: fadeInUp 1s ease-out;
+}
+  
+  
+  
  

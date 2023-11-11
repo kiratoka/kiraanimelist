@@ -2,6 +2,8 @@ import LoginAuthNavbar from "./LoginAuthNavbar"
 import FiturPencarianKecil from "./FiturPencarianKecil"
 import Link from "next/link"
 import { authUserSession } from "@/libs/authlibs"
+import Image from "next/image"
+
 
 const InputSearchLanjutan = async () => {
     const user = await authUserSession()
@@ -24,10 +26,13 @@ const InputSearchLanjutan = async () => {
                     <Link href="#" className="block py-2 pl-3 pr-4  rounded    md:p-0 md:hover:text-cyan-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">Tentang</Link>
                 </li>
                 {
-                    user ? <Link href="/users/dashboard" className="block py-2 pl-3 pr-4  rounded    md:p-0 md:hover:text-cyan-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
+                    user ? <Link href="/users/dashboard" className="py-2 pl-3 pr-4  rounded    md:p-0 md:hover:text-cyan-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 inline-flex">
+                        <Image src={user.image} width={26} height={32} className="mr-2 rounded-full">
+
+                        </Image>
                         Dashboard
                     </Link>
-                     : null
+                        : null
                 }
 
                 <LoginAuthNavbar />
