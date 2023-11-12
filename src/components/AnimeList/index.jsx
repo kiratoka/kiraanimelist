@@ -8,7 +8,7 @@ const AnimeList = ({ api }) => {
 
         // ANIME POPULER
 
-        <div className="grid gridAnimasi xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 xl:gap-3 md:gap-4 sm:gap-2 gap-1 md:px-4 px-4 md:gap-y-12 xl:gap-y-12">
+        <div className="grid gridAnimasi xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 xl:gap-3 md:gap-4 sm:gap-2 gap-1 md:px-4 px-1 md:gap-y-12 xl:gap-y-12">
             {api.data?.map((anime, index) => {
 
                 return (
