@@ -13,7 +13,7 @@ const AnimeList = ({ api }) => {
 
                 return (
 
-                    <Link href={`/anime/${anime.mal_id}`} className="mx-2 cursor-pointer hover:text-cyan-500 transition-all" key={index}>
+                    <Link href={`/anime/${anime.mal_id}`} className="mx-1 md:mx-2 cursor-pointer hover:text-cyan-500 transition-all" key={index}>
                         <div className="">
                             <div className="flex justify-center">
                                 <div className="bg-black imgAnimeList">
