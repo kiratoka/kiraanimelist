@@ -1,6 +1,5 @@
 "use client"
 
-
 import CharaAnime from "@/components/AnimeDecs/CharaAnime"
 import DescTrailer from "@/components/AnimeDecs/DescTrailer"
 import Episode from "@/components/AnimeDecs/Episode"
@@ -9,7 +8,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 
 const Page = async ({ params }) => {
-
+    
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -32,6 +31,8 @@ const Page = async ({ params }) => {
     const trailer = animeFull.data.trailer.embed_url
     const sinopsis = animeFull.data.synopsis
     const judul = animeFull.data.title
+
+
 
     const episode = animeFull.data.episodes
     const score = animeFull.data.score
@@ -59,6 +60,7 @@ const Page = async ({ params }) => {
     //         }
     //     });
     // });
+    console.log(foto)
     return (
 
         <div>

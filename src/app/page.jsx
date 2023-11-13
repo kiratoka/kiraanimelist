@@ -10,7 +10,7 @@ import { getAnimeResponse, getNestedAnimeResponse } from '../libs/api-libs'
 import HeaderHome from '@/components/Home/HeaderHome'
 import Header2 from "@/components/AnimeList/Header2"
 import Footer from "@/components/Footer/Footer"
-
+import RandomPage from "@/components/Home/RekomendasiKira/RandomPage"
 
 // Jika Komponen File bernama Index.js maka tidak perlu tulis nama file komponennya
 
@@ -42,7 +42,7 @@ const Page = async () => {
   let recommendAnime = await getNestedAnimeResponse("recommendations/anime", "entry")
   recommendAnime = {
 
-    data: recommendAnime.sort(() => Math.random() - 0.5).slice(0, 10)
+    data: recommendAnime.sort(() => Math.random() - 0.5).slice(0, 5)
   }
   // console.log(recommendAnime)
 
@@ -68,6 +68,9 @@ const Page = async () => {
 
         <Header2 title="Rekomendasi Anime" />
         <AnimeList api={recommendAnime} />
+      </section>
+      <section>
+        <RandomPage />
       </section>
       <Footer />
     </>

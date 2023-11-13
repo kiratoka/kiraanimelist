@@ -1,6 +1,4 @@
 import { useState } from "react"
-import { useEffect } from "react"
-
 
 
 const DescTrailer = ({ judul, sinopsis, foto, trailer }) => {
@@ -46,7 +44,7 @@ const DescTrailer = ({ judul, sinopsis, foto, trailer }) => {
                         <div className="max-lg:pr-6 pr-10 flex flex-row-reverse">
                             <button onClick={handleVideoPlayer} type="button" className="text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 font-medium rounded-md text-sm px-5 py-2.5 text-center mb-2 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-900">Tutup</button>
                         </div>
-                        <iframe className="flex w-11/12 h-96 mx-auto md:pr-2 max-md:pb-32" src={trailer} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture ;" allowfullscreen></iframe>
+                        <iframe className="flex w-11/12 h-96 mx-auto md:pr-2 max-md:pb-32" src={trailer}  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture ;" allowFullScreen></iframe>
                     </div>
 
                 )
