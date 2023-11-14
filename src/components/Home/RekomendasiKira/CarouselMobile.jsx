@@ -71,7 +71,7 @@ const CarouselMobile = () => {
     }, []);
     return (
         <div>
-            <div className="relative w-full max-md:h-[21vh] h-96">
+            <div className="relative w-full max-md:h-[23vh] h-96">
                 {/* Membungkus komponen dengan AnimatePresence untuk mengaktifkan animasi keluar */}
                 <AnimatePresence>
                     {/* Membuat komponen item dengan motion.div dan memberikan properti animasi dan key */}
@@ -84,7 +84,7 @@ const CarouselMobile = () => {
                     >
                         {/* Menampilkan gambar sesuai dengan indeks item yang sedang aktif */}
                         <Link href={linkAnime[index]} className="absolute w-full h-full flex items-center">
-                            <img src={images[index]} alt={`Image ${index + 1}`} className="max-md:h-[21vh] w-full h-full" />
+                            <img src={images[index]} alt={`Image ${index + 1}`} className="max-md:h-[23vh] w-full h-full" />
                         </Link>
                     </motion.div>
                 </AnimatePresence>
