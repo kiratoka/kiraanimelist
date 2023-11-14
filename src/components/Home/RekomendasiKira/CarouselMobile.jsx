@@ -1,6 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 import { useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -17,6 +18,17 @@ const CarouselMobile = () => {
         "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/1f9f9c9be8e2c41b17168a6454f849ff.jpe",
         "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/068f9d799bd17b21ca875e8591d3d64d.jpe",
     ];
+
+    const linkAnime = [
+        "/anime/54959",
+        "/anime/36474",
+        "/anime/50461",
+        "/anime/38680",
+        "/anime/48316",
+        "/anime/15051",
+        "/anime/11111",
+        "/anime/11843",
+    ]
 
     // State untuk menyimpan indeks item yang sedang aktif
     const [index, setIndex] = useState(0);
@@ -59,7 +71,7 @@ const CarouselMobile = () => {
     }, []);
     return (
         <div>
-            <div className="relative w-full h-96">
+            <div className="relative w-full max-md:h-[21vh] h-96">
                 {/* Membungkus komponen dengan AnimatePresence untuk mengaktifkan animasi keluar */}
                 <AnimatePresence>
                     {/* Membuat komponen item dengan motion.div dan memberikan properti animasi dan key */}
@@ -71,7 +83,9 @@ const CarouselMobile = () => {
                         className="absolute w-full h-full flex items-center"
                     >
                         {/* Menampilkan gambar sesuai dengan indeks item yang sedang aktif */}
-                        <img src={images[index]} alt={`Image ${index + 1}`} className="max-md:h-[21vh] w-full h-full" />
+                        <Link href={linkAnime[index]} className="absolute w-full h-full flex items-center">
+                            <img src={images[index]} alt={`Image ${index + 1}`} className="max-md:h-[21vh] w-full h-full" />
+                        </Link>
                     </motion.div>
                 </AnimatePresence>
                 {/* Membuat tombol prev dan next dengan motion.button dan memberikan properti onClick */}
@@ -79,14 +93,14 @@ const CarouselMobile = () => {
                     onClick={() => changeIndex("prev")}
                     className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black/40 text-white h-full w-[10vw]"
                 >
-                    <FaChevronLeft className="absolute left-1/2"/>
+                    <FaChevronLeft className="absolute left-1/2 transform -translate-x-1/2" />
                 </motion.button>
                 <motion.button
                     onClick={() => changeIndex("next")}
                     className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black/40 text-white h-full w-[10vw]"
                 >
-                  
-                    <FaChevronRight className="absolute right-1/2"/>
+
+                    <FaChevronRight className="absolute left-1/2 transform -translate-x-1/2" />
                 </motion.button>
             </div>
         </div>
