@@ -60,7 +60,6 @@ const Page = async ({ params }) => {
     //         }
     //     });
     // });
-    console.log(foto)
     return (
 
         <div>

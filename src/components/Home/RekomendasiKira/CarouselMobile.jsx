@@ -91,13 +91,13 @@ const CarouselMobile = () => {
                 {/* Membuat tombol prev dan next dengan motion.button dan memberikan properti onClick */}
                 <motion.button
                     onClick={() => changeIndex("prev")}
-                    className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black/40 text-white h-full w-[10vw]"
+                    className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black/20 text-white h-full w-[10vw]"
                 >
                     <FaChevronLeft className="absolute left-1/2 transform -translate-x-1/2" />
                 </motion.button>
                 <motion.button
                     onClick={() => changeIndex("next")}
-                    className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black/40 text-white h-full w-[10vw]"
+                    className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black/20 text-white h-full w-[10vw]"
                 >
 
                     <FaChevronRight className="absolute left-1/2 transform -translate-x-1/2" />

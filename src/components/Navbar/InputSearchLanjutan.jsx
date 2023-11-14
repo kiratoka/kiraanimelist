@@ -18,12 +18,12 @@ const InputSearchLanjutan = async () => {
                 </div>
                 <FiturPencarianKecil />
             </div>
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-gray-800 md:bg-transparent border-gray-700">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-black md:bg-transparent border-gray-700">
                 <li>
-                    <Link href="/" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 hover:text-cyan-500" aria-current="page">Home</Link>
+                    <Link href="/" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 hover:text-cyan-500 max-md:hover:bg-gray-700 " aria-current="page">Home</Link>
                 </li>
                 <li>
-                    <Link href="#" className="block py-2 pl-3 pr-4  rounded    md:p-0 md:hover:text-cyan-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">Tentang</Link>
+                    <Link href="#" className="block py-2 pl-3 pr-4 rounded md:p-0 hover:text-cyan-500 text-white hover:bg-gray-700 md:hover:bg-transparent border-gray-700">Tentang</Link>
                 </li>
                 {
                     user ? <Link href="/users/dashboard" className="py-2 pl-3 pr-4  rounded    md:p-0 md:hover:text-cyan-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 inline-flex">
@@ -33,11 +33,10 @@ const InputSearchLanjutan = async () => {
                     </Link>
                         : null
                 }
-
+                <li className="block rounded md:p-0 hover:text-cyan-500 text-white hover:bg-gray-700 md:hover:bg-transparent border-gray-700">
                 <LoginAuthNavbar />
-                <li>
-
                 </li>
+              
             </ul>
         </div>
 

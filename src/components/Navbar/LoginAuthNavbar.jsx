@@ -11,19 +11,19 @@ const LoginAuthNavbar = async () => {
         <div>
             {
                 user ?
-                    <li>
-                        <Link href={actionURL} className="block py-2 pl-3 pr-4  rounded    md:p-0 text-white md:hover:text-red-500 hover:text-white md:hover:bg-transparent border-gray-700">
-                            
+                    <div>
+                        <Link href={actionURL} className="block py-2 pl-3 pr-4  rounded    md:p-0 text-white hover:text-red-500 md:hover:bg-transparent border-gray-700 ">
+
                             {actionLabel}
                         </Link>
-                    </li >
+                    </ div>
                     :
-                    <li>
-                        <Link href={actionURL} className="py-2 pl-3 pr-4  rounded    md:p-0 text-white md:hover:text-cyan-500 hover:text-white md:hover:bg-transparent border-gray-700  inline-flex">
+                    <div>
+                        <Link href={actionURL} className="py-2 pl-3 pr-4  rounded md:p-0 text-white hover:text-cyan-500 md:hover:bg-transparent border-gray-700  inline-flex hover:bg-gray-700">
                             <FaUserCircle className="text-2xl mr-2" />
                             {actionLabel}
                         </Link>
-                    </li >
+                    </div >
             }
         </div>
     );

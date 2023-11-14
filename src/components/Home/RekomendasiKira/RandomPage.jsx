@@ -78,8 +78,8 @@ const RandomPage = () => {
             <div className="max-md:hidden">
                 <AnimeListKira animeList={animeList} />
             </div>
-            <div className="hidden max-md:block mx-2">
-                <h1 className='text-2xl font-bold text-color-primary mx-6 my-3'>Anime Favorite Kiratoka</h1>
+            <div className="hidden max-md:block mx-2 mb-16">
+                <h1 className='text-2xl font-bold text-color-primary mx-6 my-5'>Anime Favorite Kiratoka</h1>
                 <CarouselMobile animeList={animeList} />
             </div>
 

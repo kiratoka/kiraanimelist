@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <div className="md:h-[15vh]">
 
-            <nav className=" bg-gray-800 md:bg-transparent py-2">
+            <nav className=" bg-black md:bg-transparent py-2">
                 <div className="flex flex-wrap md:items-center md:justify-between md:flex-row flex-col mx-auto p-4 md:ml-8">
                     <a href="/" className="flex justify-center">
                         <Image src="/LogoKiraAnimeList.png" width={160} height={160} className="h-14 w-14 md:h-16 md:w-16 md:mr-3" alt="" />
