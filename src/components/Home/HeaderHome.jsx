@@ -1,7 +1,7 @@
 const HeaderHome = () => {
     return (
         <section className="kebelakang md:top-0 text-white">
-            <div className='backgroundTransparan w-full'>
+            <div className='backgroundTransparan max-md:bg-black/50 w-full'>
                 <div
                     className="mx-auto max-w-screen-xl px-4 max-md:py-0 max-md:h-[500px] py-40 flex max-md:pt-20 max-sm:pt-32"
                 >
