@@ -25,7 +25,7 @@ const FiturPencarianKecil = () => {
 
     return (  
         <div>
-            <input type="text" id="search-navbar" className="block w-full p-2 pl-10 text-sm  border gray-50 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Cari Anime" ref={searchRef} onKeyDown={handleSearch} />
+            <input type="text" className="block w-full p-2 pl-10 text-sm  border gray-50 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Cari Anime" ref={searchRef} onKeyDown={handleSearch} />
         </div>
     );
 }

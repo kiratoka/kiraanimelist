@@ -3,9 +3,9 @@ const HeaderHome = () => {
         <section className="kebelakang md:top-0 text-white">
             <div className='backgroundTransparan w-full'>
                 <div
-                    className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:items-center"
+                    className="mx-auto max-w-screen-xl px-4 max-md:py-0 max-md:h-[50vh] py-40 flex max-md:pt-20 max-sm:pt-32"
                 >
-                    <div className="mx-auto max-w-3xl pt-10 text-center">
+                    <div className="mx-auto max-w-3xl max-md:pt-0 pt-10 text-center">
                         <h1
                             className="bg-gradient-to-r from-green-300 via-sky-400 to-cyan-400 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
                         >

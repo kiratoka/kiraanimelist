@@ -158,6 +158,8 @@
   background-image: url("https://i.bandori.party/u/c/art/2094Hina-Hikawa-Cool-For-Those-of-Us-Spreading-Our-Wings-oxdmtb.png");
   background-position-x: 60%;
   background-position-y: 40%;
+  position: absolute;
+  z-index: -1;
 }
 
 @media (min-width: 768px) {
