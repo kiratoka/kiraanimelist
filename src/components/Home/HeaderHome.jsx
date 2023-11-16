@@ -3,7 +3,7 @@ const HeaderHome = () => {
         <section className="kebelakang md:top-0 text-white">
             <div className='backgroundTransparan w-full'>
                 <div
-                    className="mx-auto max-w-screen-xl px-4 max-md:py-0 max-md:h-[50vh] py-40 flex max-md:pt-20 max-sm:pt-32"
+                    className="mx-auto max-w-screen-xl px-4 max-md:py-0 max-md:h-[500px] py-40 flex max-md:pt-20 max-sm:pt-32"
                 >
                     <div className="mx-auto max-w-3xl max-md:pt-0 pt-10 text-center">
                         <h1
